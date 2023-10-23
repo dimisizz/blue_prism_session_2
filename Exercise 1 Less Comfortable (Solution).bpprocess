@@ -1,0 +1,111 @@
+﻿<process name="ExerciseOne Less Comfortable (Solution)" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="53948ab6-9ea8-42c5-8435-a970832b600f">
+  <view>
+    <camerax>229</camerax>
+    <cameray>-135</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="d9e09006-40ee-4c4e-97a2-d64bfcbbd530" name="Start" type="Start">
+    <display x="15" y="-75" />
+    <onsuccess>7191c141-969c-4553-8ff2-83dd19a25c59</onsuccess>
+  </stage>
+  <stage stageid="5eb66cf6-aea5-44a8-abea-82a833ad0245" name="End" type="End">
+    <display x="15" y="285" />
+  </stage>
+  <stage stageid="7a1ff5bd-7791-4503-997c-ef2822a95f77" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="9de77365-0905-4d21-9d0d-385195f30133" name="First name" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-30" y="-135" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">     mi Ke     </initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="92db8bea-3000-4ae4-a145-346ccf0d394d" name="Last name" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="105" y="-135" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">     s M   i th     </initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="010b64f1-8c5b-432c-aab1-322d36b97c99" name="Full name" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="240" y="-135" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2a5b4c28-e12c-439a-a5dc-8fa131b0d7e9" name="Note1" type="Note">
+    <narrative>EXERCISE 1
+
+First name = "     mi Ke     "
+
+Last name = "     s M   i th     "
+
+Full name should be "MIKE SMITH"</narrative>
+    <display x="-210" y="45" w="180" h="120" />
+  </stage>
+  <stage stageid="7191c141-969c-4553-8ff2-83dd19a25c59" name="Remove spaces from First name" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" w="210" h="30" />
+    <onsuccess>7d32ff7d-908a-4fee-90a1-559a00861663</onsuccess>
+    <calculation expression="Replace([First name], &quot; &quot;, &quot;&quot;)" stage="First name without spaces" />
+  </stage>
+  <stage stageid="6c1312ac-9998-4b25-8088-68151e4a09ac" name="First name without spaces" type="Data">
+    <display x="255" y="-15" w="210" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7d32ff7d-908a-4fee-90a1-559a00861663" name="Remove spaces from Last name" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="45" w="210" h="30" />
+    <onsuccess>ebec36f5-2f47-4dce-ba14-2de14f7b190f</onsuccess>
+    <calculation expression="Replace([Last name], &quot; &quot;, &quot;&quot;)" stage="Last name without spaces" />
+  </stage>
+  <stage stageid="a2169ad4-2116-4165-8a95-8759a8f46690" name="Last name without spaces" type="Data">
+    <display x="255" y="45" w="210" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ebec36f5-2f47-4dce-ba14-2de14f7b190f" name="Concatenate First name and Last name" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="105" w="210" h="30" />
+    <onsuccess>baff1bfd-b8d9-4623-929c-447834910ca3</onsuccess>
+    <calculation expression="[First name without spaces] &amp; &quot; &quot; &amp; [Last name without spaces]" stage="Concatenated name" />
+  </stage>
+  <stage stageid="5ec6f2cc-5290-4f22-930a-9c06fe101a92" name="Concatenated name" type="Data">
+    <display x="255" y="105" w="210" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="baff1bfd-b8d9-4623-929c-447834910ca3" name="Capitalize name" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="165" w="210" h="30" />
+    <onsuccess>053ae6c7-cebb-4c47-94cf-b0db003e12b5</onsuccess>
+    <calculation expression="Upper([Concatenated name])" stage="Capitalized name" />
+  </stage>
+  <stage stageid="c04ec8c3-28a1-4438-a68a-e3a40b780c3b" name="Capitalized name" type="Data">
+    <display x="255" y="165" w="210" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="053ae6c7-cebb-4c47-94cf-b0db003e12b5" name="Move Capitalized name to Full name" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="225" w="210" h="30" />
+    <onsuccess>5eb66cf6-aea5-44a8-abea-82a833ad0245</onsuccess>
+    <calculation expression="[Capitalized name]" stage="Full name" />
+  </stage>
+</process>

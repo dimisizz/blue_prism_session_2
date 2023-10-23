@@ -1,0 +1,104 @@
+﻿<process name="ExerciseTwo Less Comfortable" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="58c3aab7-806f-4f31-83be-cc4f2d91fb8c">
+  <view>
+    <camerax>0</camerax>
+    <cameray>42</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="3155e2a2-d646-420e-9237-e619565eb710" name="Start" type="Start">
+    <display x="15" y="-135" />
+    <onsuccess>ec9057b8-4a5c-4c52-bc60-5a6fd26a6b16</onsuccess>
+  </stage>
+  <stage stageid="ec9057b8-4a5c-4c52-bc60-5a6fd26a6b16" name="End" type="End">
+    <display x="15" y="60" />
+  </stage>
+  <stage stageid="dc2f8957-5f9f-463f-83e6-edd043fa3a95" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="f9433147-320b-449d-9087-dbdd2b2d5379" name="Note1" type="Note">
+    <narrative>EXERCISE 2 ( Less Comfortable )
+
+
+Full Name should be capitalized last name, followed by a comma, followed by a space, and followed by first name.
+( LASTNAME, Firstname )
+
+If Title is "Mr.", Gender should be "Male".
+If Title is "Ms.", Gender should be "Female".
+If Title is "Mrs.", Gender should be "Female".
+
+Age should be Year of Birth subtracted from 2023.
+
+If Age is less then 20, IsMinor should be True.
+Otherwise, IsMinor should be False.</narrative>
+    <display x="-330" y="75" w="450" h="210" />
+  </stage>
+  <stage stageid="80f3ac1e-1b4c-4797-8ffa-ed01f30b349d" name="People" type="Collection">
+    <display x="195" y="-120" w="180" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Title" type="text" />
+      <field name="First Name" type="text" />
+      <field name="Last Name" type="text" />
+      <field name="Full Name" type="text" />
+      <field name="Gender" type="text" />
+      <field name="Year of Birth" type="number" />
+      <field name="Age" type="number" />
+      <field name="IsMinor" type="flag" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Title" type="text" value="Mr." />
+        <field name="First Name" type="text" value="Maximillian" />
+        <field name="Last Name" type="text" value="Glenn" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="2000" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Mrs." />
+        <field name="First Name" type="text" value="Annabella" />
+        <field name="Last Name" type="text" value="Doyle" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="1986" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Ms." />
+        <field name="First Name" type="text" value="Jennie" />
+        <field name="Last Name" type="text" value="Guzman" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="2012" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Mr." />
+        <field name="First Name" type="text" value="Brendan" />
+        <field name="Last Name" type="text" value="Payne" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="2005" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Mrs." />
+        <field name="First Name" type="text" value="Sallie" />
+        <field name="Last Name" type="text" value="Pugh" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="1993" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+</process>

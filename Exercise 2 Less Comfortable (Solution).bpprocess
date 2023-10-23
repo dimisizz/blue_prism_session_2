@@ -1,0 +1,232 @@
+﻿<process name="ExerciseTwo Less Comfortable (Solution)" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="fcaf468a-2696-4e38-ba45-4714ae9259a2">
+  <view>
+    <camerax>243</camerax>
+    <cameray>27</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="406ef9c0-542b-4ff7-851a-c443da0f6186" name="Start" type="Start">
+    <display x="15" y="-135" />
+    <onsuccess>d9650798-9617-4d29-b0d0-df392ffdc4df</onsuccess>
+  </stage>
+  <stage stageid="8f7490c2-f338-46f5-b89c-85145f4f7aa1" name="End" type="End">
+    <display x="510" y="-30" />
+  </stage>
+  <stage stageid="e627e243-0799-4db4-beab-1cc4fbeb2725" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="1ac4e40f-c9ff-4cc5-83c7-863524ee2317" name="People" type="Collection">
+    <display x="210" y="-120" w="180" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Title" type="text" />
+      <field name="First Name" type="text" />
+      <field name="Last Name" type="text" />
+      <field name="Full Name" type="text" />
+      <field name="Gender" type="text" />
+      <field name="Year of Birth" type="number" />
+      <field name="Age" type="number" />
+      <field name="IsMinor" type="flag" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Title" type="text" value="Mr." />
+        <field name="First Name" type="text" value="Maximillian" />
+        <field name="Last Name" type="text" value="Glenn" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="2000" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Mrs." />
+        <field name="First Name" type="text" value="Annabella" />
+        <field name="Last Name" type="text" value="Doyle" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="1986" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Ms." />
+        <field name="First Name" type="text" value="Jennie" />
+        <field name="Last Name" type="text" value="Guzman" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="2012" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Mr." />
+        <field name="First Name" type="text" value="Brendan" />
+        <field name="Last Name" type="text" value="Payne" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="2005" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+      <row>
+        <field name="Title" type="text" value="Mrs." />
+        <field name="First Name" type="text" value="Sallie" />
+        <field name="Last Name" type="text" value="Pugh" />
+        <field name="Full Name" type="text" value="" />
+        <field name="Gender" type="text" value="" />
+        <field name="Year of Birth" type="number" value="1993" />
+        <field name="Age" type="number" value="" />
+        <field name="IsMinor" type="flag" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="d9650798-9617-4d29-b0d0-df392ffdc4df" name="Loop Start1" type="LoopStart">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-75" />
+    <onsuccess>f31cb84c-cfeb-4005-b4ff-770c5687be98</onsuccess>
+    <groupid>e5e89270-8283-4262-abef-bfcecdc71025</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>People</loopdata>
+  </stage>
+  <stage stageid="aca6dfb6-6cf0-4b75-9b35-ee4976299626" name="Loop End1" type="LoopEnd">
+    <loginhibit onsuccess="true" />
+    <display x="510" y="30" />
+    <onsuccess>8f7490c2-f338-46f5-b89c-85145f4f7aa1</onsuccess>
+    <groupid>e5e89270-8283-4262-abef-bfcecdc71025</groupid>
+  </stage>
+  <stage stageid="f31cb84c-cfeb-4005-b4ff-770c5687be98" name="Add Full Name" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" w="120" h="30" />
+    <onsuccess>13d25ad2-0a33-4586-8ede-3f937d76f0a5</onsuccess>
+    <calculation expression="Upper([People.Last Name]) &amp; &quot;, &quot; &amp; [People.First Name]" stage="People.Full Name" />
+  </stage>
+  <stage stageid="13d25ad2-0a33-4586-8ede-3f937d76f0a5" name="Choice1" type="ChoiceStart">
+    <display x="15" y="45" w="90" h="30" />
+    <groupid>b2f5ed30-1e23-471a-aa22-3122195c8a70</groupid>
+    <choices>
+      <choice expression="[People.Title] = &quot;Mr.&quot;">
+        <name>Mr.</name>
+        <distance>45</distance>
+        <ontrue>719c4a70-c209-401a-a3fc-b3bb7b1543e0</ontrue>
+      </choice>
+      <choice expression="[People.Title] = &quot;Ms.&quot;">
+        <name>Ms.</name>
+        <distance>90</distance>
+        <ontrue>dd709cd1-257d-4885-a832-d8c6d5277efd</ontrue>
+      </choice>
+      <choice expression="[People.Title] = &quot;Mrs.&quot;">
+        <name>Mrs.</name>
+        <distance>135</distance>
+        <ontrue>bd120ca9-0bbd-451c-9332-cc3f05326f23</ontrue>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="44f27f70-3c16-4401-9a8d-25b88e7e308c" name="Otherwise1" type="ChoiceEnd">
+    <display x="15" y="225" w="90" h="30" />
+    <onsuccess>b6287dfa-463f-4d78-b978-daa5739c50fe</onsuccess>
+    <groupid>b2f5ed30-1e23-471a-aa22-3122195c8a70</groupid>
+  </stage>
+  <stage stageid="719c4a70-c209-401a-a3fc-b3bb7b1543e0" name="People.Gender = Male" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="90" w="120" h="30" />
+    <onsuccess>4111bdcd-ae50-46b0-aebe-d744e5c84938</onsuccess>
+    <calculation expression="&quot;Male&quot;" stage="People.Gender" />
+  </stage>
+  <stage stageid="dd709cd1-257d-4885-a832-d8c6d5277efd" name="People.Gender = Female" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="135" w="120" h="30" />
+    <onsuccess>6465e6f1-449c-422f-bb00-2a0732585c92</onsuccess>
+    <calculation expression="&quot;Female&quot;" stage="People.Gender" />
+  </stage>
+  <stage stageid="bd120ca9-0bbd-451c-9332-cc3f05326f23" name="People.Gender = Female" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="120" y="180" w="120" h="30" />
+    <onsuccess>74c67d45-a73f-4689-bcc9-e5f6ef7a34f0</onsuccess>
+    <calculation expression="&quot;Female&quot;" stage="People.Gender" />
+  </stage>
+  <stage stageid="6465e6f1-449c-422f-bb00-2a0732585c92" name="Add Age" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="255" y="135" w="90" h="30" />
+    <onsuccess>5c308e5d-8306-4f99-95ac-3f7131ab1713</onsuccess>
+    <calculation expression="2023 - [People.Year of Birth]" stage="People.Age" />
+  </stage>
+  <stage stageid="4111bdcd-ae50-46b0-aebe-d744e5c84938" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="255" y="90" w="10" h="10" />
+    <onsuccess>6465e6f1-449c-422f-bb00-2a0732585c92</onsuccess>
+  </stage>
+  <stage stageid="74c67d45-a73f-4689-bcc9-e5f6ef7a34f0" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="255" y="180" w="10" h="10" />
+    <onsuccess>6465e6f1-449c-422f-bb00-2a0732585c92</onsuccess>
+  </stage>
+  <stage stageid="b6287dfa-463f-4d78-b978-daa5739c50fe" name="Anchor3" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="255" y="225" w="10" h="10" />
+    <onsuccess>6465e6f1-449c-422f-bb00-2a0732585c92</onsuccess>
+  </stage>
+  <stage stageid="5c308e5d-8306-4f99-95ac-3f7131ab1713" name="People.Age &lt; 20" type="Decision">
+    <display x="390" y="135" w="120" h="30" />
+    <decision expression="[People.Age] &lt; 20" />
+    <ontrue>19efcfe8-051d-4c65-87b0-e7d60f342ef4</ontrue>
+    <onfalse>45136757-6bf6-48f9-9e8b-d9c30bdceff1</onfalse>
+  </stage>
+  <stage stageid="618577df-e834-4782-bb26-da4620dbe0a7" name="People.IsMinor = True" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="510" y="90" w="120" h="30" />
+    <onsuccess>c9d98f49-4ce2-4ca8-9bb5-b160baa143ae</onsuccess>
+    <calculation expression="True" stage="People.IsMinor" />
+  </stage>
+  <stage stageid="50552dcd-6cda-49ad-9462-682b72e9a5b4" name="People.IsMinor = False" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="510" y="180" w="120" h="30" />
+    <onsuccess>96223117-7037-40a0-80b0-137e07716dc1</onsuccess>
+    <calculation expression="False" stage="People.IsMinor" />
+  </stage>
+  <stage stageid="19efcfe8-051d-4c65-87b0-e7d60f342ef4" name="Anchor4" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="390" y="90" w="10" h="10" />
+    <onsuccess>618577df-e834-4782-bb26-da4620dbe0a7</onsuccess>
+  </stage>
+  <stage stageid="45136757-6bf6-48f9-9e8b-d9c30bdceff1" name="Anchor5" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="390" y="180" w="10" h="10" />
+    <onsuccess>50552dcd-6cda-49ad-9462-682b72e9a5b4</onsuccess>
+  </stage>
+  <stage stageid="96223117-7037-40a0-80b0-137e07716dc1" name="Anchor6" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="600" y="180" w="10" h="10" />
+    <onsuccess>a65ee7ea-a961-4027-b240-2a8419d652e2</onsuccess>
+  </stage>
+  <stage stageid="c9d98f49-4ce2-4ca8-9bb5-b160baa143ae" name="Anchor7" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="600" y="90" w="10" h="10" />
+    <onsuccess>a65ee7ea-a961-4027-b240-2a8419d652e2</onsuccess>
+  </stage>
+  <stage stageid="a65ee7ea-a961-4027-b240-2a8419d652e2" name="Anchor8" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="600" y="30" w="10" h="10" />
+    <onsuccess>aca6dfb6-6cf0-4b75-9b35-ee4976299626</onsuccess>
+  </stage>
+  <stage stageid="6170309c-f978-4367-b810-296f42c14964" name="Note1" type="Note">
+    <narrative>EXERCISE 2 ( Less Comfortable )
+
+
+Full Name should be capitalized last name, followed by a comma, followed by a space, and followed by first name.
+( LASTNAME, Firstname )
+
+If Title is "Mr.", Gender should be "Male".
+If Title is "Ms.", Gender should be "Female".
+If Title is "Mrs.", Gender should be "Female".
+
+Age should be Year of Birth subtracted from 2023.
+
+If Age is less then 20, IsMinor should be True.
+Otherwise, IsMinor should be False.</narrative>
+    <display x="-330" y="75" w="450" h="210" />
+  </stage>
+</process>

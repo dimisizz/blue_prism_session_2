@@ -1,0 +1,184 @@
+﻿<process name="VBO - ExerciseFour More Comfortable" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" type="object" runmode="Exclusive" preferredid="d3f29fb9-b19a-4ac7-b48a-fc7c2767473b">
+  <appdef>
+    <element name="Application Root">
+      <id>f56eab87-92cc-48ca-8925-ab13cbb40dda</id>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="b24db101-5f28-4a4b-8080-56d224635dfa" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="745c3d6f-a37a-4ac7-8b68-4142bbd8988b" type="Normal" published="False">
+    <name>Action 1</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.875</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="4cfb85de-713d-4416-b3a0-1e58acfa83fe" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>e81fe414-e02a-4fb5-9c78-ac864041796b</onsuccess>
+  </stage>
+  <stage stageid="e81fe414-e02a-4fb5-9c78-ac864041796b" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="87d7e4c8-4045-4430-acb9-6793b4b462e8" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>System.Data</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="2f02c4d5-6d1d-4add-9d37-0422fbaf9d37" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>b24db101-5f28-4a4b-8080-56d224635dfa</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="30ee22c0-10ce-4834-a837-1a2ad182a1b7" name="Start" type="Start">
+    <subsheetid>b24db101-5f28-4a4b-8080-56d224635dfa</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>e3fa88f8-0680-494d-85ba-ab9b7019bb8d</onsuccess>
+  </stage>
+  <stage stageid="e3fa88f8-0680-494d-85ba-ab9b7019bb8d" name="End" type="End">
+    <subsheetid>b24db101-5f28-4a4b-8080-56d224635dfa</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="13c191eb-939e-4bbd-ab08-0c60254c9fa4" name="Action 1" type="SubSheetInfo">
+    <subsheetid>745c3d6f-a37a-4ac7-8b68-4142bbd8988b</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="5b617c3d-f67d-4c05-8b09-f592ed6291da" name="Start" type="Start">
+    <subsheetid>745c3d6f-a37a-4ac7-8b68-4142bbd8988b</subsheetid>
+    <loginhibit />
+    <display x="15" y="-135" />
+    <onsuccess>777ba397-3b3b-4534-ac05-4cc6ee7d7c55</onsuccess>
+  </stage>
+  <stage stageid="777ba397-3b3b-4534-ac05-4cc6ee7d7c55" name="End" type="End">
+    <subsheetid>745c3d6f-a37a-4ac7-8b68-4142bbd8988b</subsheetid>
+    <loginhibit />
+    <display x="15" y="60" />
+  </stage>
+  <stage stageid="08249721-f3b5-4abe-ae4f-255e29828816" name="" type="Note">
+    <subsheetid>b24db101-5f28-4a4b-8080-56d224635dfa</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="f601000f-5595-4600-8f9d-b6af958e55f3" name="" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="938a5c09-57ad-4426-a1af-0e1074bed23a" name="Stocks" type="Collection">
+    <subsheetid>745c3d6f-a37a-4ac7-8b68-4142bbd8988b</subsheetid>
+    <loginhibit />
+    <display x="-180" y="15" w="150" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Stock" type="text" />
+      <field name="Date1" type="text" />
+      <field name="Price1" type="text" />
+      <field name="Date2" type="text" />
+      <field name="Price2" type="text" />
+      <field name="Date3" type="text" />
+      <field name="Price3" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Stock" type="text" value="PTT" />
+        <field name="Date1" type="text" value="" />
+        <field name="Price1" type="text" value="" />
+        <field name="Date2" type="text" value="" />
+        <field name="Price2" type="text" value="" />
+        <field name="Date3" type="text" value="" />
+        <field name="Price3" type="text" value="" />
+      </row>
+      <row>
+        <field name="Stock" type="text" value="ADVANC" />
+        <field name="Date1" type="text" value="" />
+        <field name="Price1" type="text" value="" />
+        <field name="Date2" type="text" value="" />
+        <field name="Price2" type="text" value="" />
+        <field name="Date3" type="text" value="" />
+        <field name="Price3" type="text" value="" />
+      </row>
+      <row>
+        <field name="Stock" type="text" value="SIRI" />
+        <field name="Date1" type="text" value="" />
+        <field name="Price1" type="text" value="" />
+        <field name="Date2" type="text" value="" />
+        <field name="Price2" type="text" value="" />
+        <field name="Date3" type="text" value="" />
+        <field name="Price3" type="text" value="" />
+      </row>
+      <row>
+        <field name="Stock" type="text" value="QH" />
+        <field name="Date1" type="text" value="" />
+        <field name="Price1" type="text" value="" />
+        <field name="Date2" type="text" value="" />
+        <field name="Price2" type="text" value="" />
+        <field name="Date3" type="text" value="" />
+        <field name="Price3" type="text" value="" />
+      </row>
+      <row>
+        <field name="Stock" type="text" value="CPALL" />
+        <field name="Date1" type="text" value="" />
+        <field name="Price1" type="text" value="" />
+        <field name="Date2" type="text" value="" />
+        <field name="Price2" type="text" value="" />
+        <field name="Date3" type="text" value="" />
+        <field name="Price3" type="text" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="36803595-9b79-4512-837d-a02b27efe125" name="Note1" type="Note">
+    <subsheetid>745c3d6f-a37a-4ac7-8b68-4142bbd8988b</subsheetid>
+    <loginhibit />
+    <narrative>EXERCISE 4 ( More Comfortable )
+
+Get stocks historical prices from the following website:
+https://www.set.or.th/th/market/index/set/overview</narrative>
+    <display x="-405" y="30" w="240" h="90" />
+  </stage>
+</process>

@@ -1,0 +1,94 @@
+﻿<process name="ExerciseTwo More Comfortable" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="7a4ed9d6-c48b-47be-8b4d-2a0cc0e704bc">
+  <view>
+    <camerax>0</camerax>
+    <cameray>-21</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="8e360c34-867c-46c3-a60f-a4343f5a20a1" name="Start" type="Start">
+    <display x="15" y="-135" />
+    <onsuccess>8c846d46-bbff-4ef4-8f20-b586983dc5ae</onsuccess>
+  </stage>
+  <stage stageid="8c846d46-bbff-4ef4-8f20-b586983dc5ae" name="End" type="End">
+    <display x="15" y="60" />
+  </stage>
+  <stage stageid="0b13711f-35cc-4463-b935-b719d1ccb15b" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="8956c10d-45e3-4237-9e21-c1c158b8d197" name="Note1" type="Note">
+    <narrative>EXERCISE 2 ( More Comfortable )
+
+Promotion Code value contains "I" for Increase, "D" for Decrease followed by adjusted percentage.
+For example:
+     - I12 means salary is increased by 12%
+     - D9 means salary is decreased by 9%
+
+Adjusted Amount should be amount that is increased or decreased from Current Salary.
+If increased, the Adjusted Amount should be positive number.
+If decreased, the Adjusted Amount should be negative number.
+Adjusted Amount should have 2 decimal places.
+
+New Salary should be an addition of Current Salary and Adjusted Amount.
+New Salary should have 2 decimal places.
+
+Rounded New Salary should be New Salary without decimal places.</narrative>
+    <display x="-315" y="90" w="420" h="240" />
+  </stage>
+  <stage stageid="04b382ea-1909-4f1c-a33e-7ae22ae861e8" name="Employees" type="Collection">
+    <display x="195" y="-120" w="180" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Name" type="text" />
+      <field name="Current Salary" type="number" />
+      <field name="Promotion Code" type="text" />
+      <field name="Adjusted Amount" type="number" />
+      <field name="New Salary" type="number" />
+      <field name="Rounded New Salary" type="number" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Name" type="text" value="Alice" />
+        <field name="Current Salary" type="number" value="32434.54" />
+        <field name="Promotion Code" type="text" value="I7" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Bob" />
+        <field name="Current Salary" type="number" value="27971.98" />
+        <field name="Promotion Code" type="text" value="D3" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Charlie" />
+        <field name="Current Salary" type="number" value="19600.12" />
+        <field name="Promotion Code" type="text" value="I9" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="David" />
+        <field name="Current Salary" type="number" value="39100.73" />
+        <field name="Promotion Code" type="text" value="D4" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Emma" />
+        <field name="Current Salary" type="number" value="28300.46" />
+        <field name="Promotion Code" type="text" value="I6" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+</process>

@@ -1,0 +1,100 @@
+﻿<process name="ExerciseOne More Comfortable (Solution)" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="cc0be5cd-4b27-4526-b63e-6fd881f3df6b">
+  <view>
+    <camerax>0</camerax>
+    <cameray>21</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="111234bd-8ccf-410d-929d-d74f0ecd47af" name="Start" type="Start">
+    <display x="15" y="-15" />
+    <onsuccess>f65b1684-3cca-4870-a68c-2eb9ea1c882d</onsuccess>
+  </stage>
+  <stage stageid="fee10fc1-4932-46bc-805e-c7e0c010e48f" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="613ea10f-72e0-4c9e-8c44-2d7574ee312a" name="First number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="-15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">40</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="080eaae1-2ce8-4ba1-9d05-4eb11bbaf37a" name="End1" type="End">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="135" />
+  </stage>
+  <stage stageid="f65b1684-3cca-4870-a68c-2eb9ea1c882d" name="Calculate average" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="60" w="150" h="30" />
+    <onsuccess>080eaae1-2ce8-4ba1-9d05-4eb11bbaf37a</onsuccess>
+    <calculation expression="Round((ToNumber([First number]) + ToNumber([Second number]) + ToNumber([Third number]) + ToNumber([Fourth number]) + ToNumber([Fifth number]) + ToNumber([Sixth number]) + ToNumber([Seventh number])) / 7, 2)" stage="Average" />
+  </stage>
+  <stage stageid="f283b7f5-582f-4737-936c-bc1046934e05" name="Second number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="30" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">21</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="82961ab4-a9d8-485b-a221-a0787ff12e1a" name="Third number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="75" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">55</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d4183398-495c-4e72-8958-bd6696e8518c" name="Fourth number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="120" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">21</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bbe5cc1f-328f-4982-b0c2-5df550387414" name="Fifth number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="165" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">48</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="70112ada-be50-4ced-ad48-ec47eb2e8595" name="Sixth number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="210" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">13</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="47be37e3-4a2a-4c38-a566-440d42422edf" name="Seventh number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="255" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">72</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="48b40aa6-cea3-488e-acc4-258175fe2ae2" name="Average" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="225" y="60" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fff03983-cfc5-46fd-a983-f4efdb05446a" name="Note1" type="Note">
+    <narrative>EXERCISE 1 ( More Comfortable )
+
+Given that you know for sure that we have only 7 numbers
+
+Calculate average of these 7 numbers
+
+The result should have 2 decimal places</narrative>
+    <display x="45" y="-120" w="270" h="120" />
+  </stage>
+</process>

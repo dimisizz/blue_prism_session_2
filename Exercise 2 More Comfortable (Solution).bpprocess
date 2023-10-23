@@ -1,0 +1,168 @@
+﻿<process name="ExerciseTwo More Comfortable (Solution)" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="38549774-0c9d-4620-ae46-531344db3a84">
+  <view>
+    <camerax>142</camerax>
+    <cameray>49</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="db172dc3-f695-4109-b1a4-b9b518bb939b" name="Start" type="Start">
+    <display x="15" y="-135" />
+    <onsuccess>69cf89bc-d415-4acd-9ae8-920af0b32d07</onsuccess>
+  </stage>
+  <stage stageid="46100275-e9ff-49a4-ac1c-b2282a83bfc2" name="End" type="End">
+    <display x="225" y="225" />
+  </stage>
+  <stage stageid="9af620ba-6205-47dc-b07e-9929f27fcf01" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="c0f85d24-38d1-42e7-b0fb-a5142cc6c0b9" name="Employees" type="Collection">
+    <display x="210" y="-120" w="180" h="60" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Name" type="text" />
+      <field name="Current Salary" type="number" />
+      <field name="Promotion Code" type="text" />
+      <field name="Adjusted Amount" type="number" />
+      <field name="New Salary" type="number" />
+      <field name="Rounded New Salary" type="number" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Name" type="text" value="Alice" />
+        <field name="Current Salary" type="number" value="32434.54" />
+        <field name="Promotion Code" type="text" value="I7" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Bob" />
+        <field name="Current Salary" type="number" value="27971.98" />
+        <field name="Promotion Code" type="text" value="D3" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Charlie" />
+        <field name="Current Salary" type="number" value="19600.12" />
+        <field name="Promotion Code" type="text" value="I9" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="David" />
+        <field name="Current Salary" type="number" value="39100.73" />
+        <field name="Promotion Code" type="text" value="D4" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+      <row>
+        <field name="Name" type="text" value="Emma" />
+        <field name="Current Salary" type="number" value="28300.46" />
+        <field name="Promotion Code" type="text" value="I6" />
+        <field name="Adjusted Amount" type="number" value="" />
+        <field name="New Salary" type="number" value="" />
+        <field name="Rounded New Salary" type="number" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="69cf89bc-d415-4acd-9ae8-920af0b32d07" name="Loop Start1" type="LoopStart">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-75" />
+    <onsuccess>b4c28207-30fb-456a-8bba-ecb2e724cad6</onsuccess>
+    <groupid>4b2d9968-94e1-445b-b54a-5d3aef24d76f</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Employees</loopdata>
+  </stage>
+  <stage stageid="5dccf11a-d874-41da-8631-f97b13d828d9" name="Loop End1" type="LoopEnd">
+    <loginhibit onsuccess="true" />
+    <display x="135" y="225" />
+    <onsuccess>46100275-e9ff-49a4-ac1c-b2282a83bfc2</onsuccess>
+    <groupid>4b2d9968-94e1-445b-b54a-5d3aef24d76f</groupid>
+  </stage>
+  <stage stageid="cfbc8d61-dad8-4b0d-ad19-89d901e382f8" name="Increased Adjusted Amount" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="135" y="30" w="150" h="30" />
+    <onsuccess>fe197fe9-3c87-4f00-8934-19e91e516b04</onsuccess>
+    <calculation expression="Round(([Employees.Current Salary] / 100) * ToNumber(Right([Employees.Promotion Code], 1)), 2)" stage="Employees.Adjusted Amount" />
+  </stage>
+  <stage stageid="b4c28207-30fb-456a-8bba-ecb2e724cad6" name="Choice1" type="ChoiceStart">
+    <display x="15" y="-15" w="90" h="30" />
+    <groupid>1f5f4c80-9afa-440d-a4ca-e3699f939b15</groupid>
+    <choices>
+      <choice expression="StartsWith([Employees.Promotion Code], &quot;I&quot;)">
+        <name>Increase</name>
+        <distance>45</distance>
+        <ontrue>cfbc8d61-dad8-4b0d-ad19-89d901e382f8</ontrue>
+      </choice>
+      <choice expression="StartsWith([Employees.Promotion Code], &quot;D&quot;)">
+        <name>Decrease</name>
+        <distance>90</distance>
+        <ontrue>a8033875-f1d6-4a73-8f35-e35bf1df9951</ontrue>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="1ab368a2-f970-4f69-8b35-096f74946cb5" name="Otherwise1" type="ChoiceEnd">
+    <display x="15" y="105" w="90" h="30" />
+    <onsuccess>cdab5831-e343-4c6b-b07a-d036685db95a</onsuccess>
+    <groupid>1f5f4c80-9afa-440d-a4ca-e3699f939b15</groupid>
+  </stage>
+  <stage stageid="a8033875-f1d6-4a73-8f35-e35bf1df9951" name="Decreased Adjusted Amount" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="135" y="75" w="150" h="30" />
+    <onsuccess>c8705d0a-3d47-457d-83b6-02bf4e57c889</onsuccess>
+    <calculation expression="-Round(([Employees.Current Salary] / 100) * ToNumber(Right([Employees.Promotion Code], 1)), 2)" stage="Employees.Adjusted Amount" />
+  </stage>
+  <stage stageid="cdab5831-e343-4c6b-b07a-d036685db95a" name="Get New Salary" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="165" w="120" h="30" />
+    <onsuccess>c2d6408b-8239-4936-8b74-2ffa9af20ff5</onsuccess>
+    <calculation expression="[Employees.Current Salary] + [Employees.Adjusted Amount]" stage="Employees.New Salary" />
+  </stage>
+  <stage stageid="c2d6408b-8239-4936-8b74-2ffa9af20ff5" name="Round New Salary" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="225" w="120" h="30" />
+    <onsuccess>5dccf11a-d874-41da-8631-f97b13d828d9</onsuccess>
+    <calculation expression="Round([Employees.New Salary])" stage="Employees.Rounded New Salary" />
+  </stage>
+  <stage stageid="eabcbafd-2a24-4471-98cb-7e475c5c1fb6" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="240" y="165" w="10" h="10" />
+    <onsuccess>cdab5831-e343-4c6b-b07a-d036685db95a</onsuccess>
+  </stage>
+  <stage stageid="c8705d0a-3d47-457d-83b6-02bf4e57c889" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="240" y="75" w="10" h="10" />
+    <onsuccess>eabcbafd-2a24-4471-98cb-7e475c5c1fb6</onsuccess>
+  </stage>
+  <stage stageid="fe197fe9-3c87-4f00-8934-19e91e516b04" name="Anchor3" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="240" y="30" w="10" h="10" />
+    <onsuccess>eabcbafd-2a24-4471-98cb-7e475c5c1fb6</onsuccess>
+  </stage>
+  <stage stageid="b0c1d57e-185c-4a6c-b68e-358c784a08aa" name="Note1" type="Note">
+    <narrative>EXERCISE 2 ( More Comfortable )
+
+Promotion Code value contains "I" for Increase, "D" for Decrease followed by adjusted percentage.
+For example:
+     - I12 means salary is increased by 12%
+     - D9 means salary is decreased by 9%
+
+Adjusted Amount should be amount that is increased or decreased from Current Salary.
+If increased, the Adjusted Amount should be positive number.
+If decreased, the Adjusted Amount should be negative number.
+Adjusted Amount should have 2 decimal places.
+
+New Salary should be an addition of Current Salary and Adjusted Amount.
+New Salary should have 2 decimal places.
+
+Rounded New Salary should be New Salary without decimal places.</narrative>
+    <display x="-315" y="90" w="420" h="240" />
+  </stage>
+</process>

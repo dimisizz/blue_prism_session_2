@@ -1,0 +1,93 @@
+﻿<process name="ExerciseOne More Comfortable" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="852dcee3-ef06-4304-9acc-4b3cb5326355">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.875</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="486c492a-cc3b-4f80-b768-8266b0ecc592" name="Start" type="Start">
+    <display x="15" y="-15" />
+    <onsuccess>2b3dd21c-be8c-421c-9200-99298415af91</onsuccess>
+  </stage>
+  <stage stageid="2b3dd21c-be8c-421c-9200-99298415af91" name="End" type="End">
+    <display x="15" y="180" />
+  </stage>
+  <stage stageid="9c386daa-b3ac-43f3-aa5f-db26a5475f59" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="97d8aa35-c247-4591-902c-f83275a7dfcc" name="First number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="-15" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">40</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="69b0af86-6d3c-4ad7-8017-ef8e147f4daa" name="Second number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="30" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">21</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9768ad17-d00f-4cbb-8926-5768ab391f95" name="Third number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="75" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">55</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3dd6d8b7-87a8-404c-9a62-b1d804d08c27" name="Fourth number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="120" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">21</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="75117adc-a9bf-422c-9ff2-ae8fae86057b" name="Fifth number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="165" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">48</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d8345caa-1965-42b1-a838-5f8d4d28a08f" name="Sixth number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="210" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">13</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8771e4ba-edeb-4887-a906-4d85d34f8ecc" name="Seventh number" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-180" y="255" w="120" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">72</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3f721b09-af8d-4e89-9c3e-36a2370ec423" name="Average" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="225" y="60" w="120" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="254a41b3-34c8-4cbf-8d64-8e17afec5c66" name="Note1" type="Note">
+    <narrative>EXERCISE 1 ( More Comfortable )
+
+Given that you know for sure that we have only 7 numbers
+
+Calculate average of these 7 numbers
+
+The result should have 2 decimal places</narrative>
+    <display x="45" y="-120" w="270" h="120" />
+  </stage>
+</process>
